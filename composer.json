@@ -1,0 +1,58 @@
+{
+  "name": "qimengyun/mine-core",
+  "description": "mine core package",
+  "type": "library",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=8.1",
+    "ext-gd": "*",
+    "ext-json": "*",
+    "ext-openssl": "*",
+    "ext-redis": "*",
+    "ext-xml": "*",
+    "ext-bcmath": "*",
+    "ext-mbstring": "*",
+    "hyperf/cache": "~3.1.0",
+    "hyperf/command": "~3.1.0",
+    "hyperf/config": "~3.1.0",
+    "hyperf/db-connection": "~3.1.0",
+    "hyperf/engine": "^2.10",
+    "hyperf/framework": "~3.1.0",
+    "hyperf/guzzle": "~3.1.0",
+    "hyperf/http-server": "~3.1.0",
+    "hyperf/logger": "~3.1.0",
+    "hyperf/memory": "~3.1.0",
+    "hyperf/process": "~3.1.0",
+    "hyperf/database": "~3.1.0",
+    "hyperf/redis": "~3.1.0",
+    "ramsey/uuid": "^4.7",
+    "hyperf/snowflake": "^3.1",
+    "hyperf/translation": "^3.1",
+    "hyperf/validation": "^3.1",
+    "hyperf/model-cache": "^3.1"
+  },
+  "suggest": {
+    "ext-json": "Required to uJSON.",
+    "ext-openssl": "Required to use HTTPS.",
+    "ext-pdo": "Required to use MySQL Client.",
+    "ext-pdo_mysql": "Required to use MySQL Client.",
+    "ext-redis": "Required to use Redis Client.",
+    "ext-xlswriter": "Required to use xlswriter."
+  },
+  "autoload": {
+    "psr-4": {
+      "Mine\\": "src/"
+    },
+    "files": [
+      "src/Helper/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {}
+  },
+  "prefer-stable": true,
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}
