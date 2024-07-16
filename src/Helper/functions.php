@@ -105,17 +105,6 @@ if (!function_exists('lang')) {
     }
 }
 
-if (!function_exists('t')) {
-    /**
-     * 多语言函数.
-     * @throws ContainerExceptionInterface
-     * @throws NotFoundExceptionInterface
-     */
-    function t(string $key, array $replace = []): string
-    {
-        return \Hyperf\Translation\__($key, $replace, lang());
-    }
-}
 
 if (!function_exists('context_set')) {
     /**
