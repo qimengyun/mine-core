@@ -45,6 +45,12 @@ if (!function_exists('config')) {
         return Hyperf\Config\config($key, $default);
     }
 }
+if (!function_exists('rpc')) {
+    function rpc($interface)
+    {
+        return container()->get($interface);
+    }
+}
 
 if (!function_exists('console')) {
     /**
