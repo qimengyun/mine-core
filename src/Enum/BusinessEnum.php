@@ -5,9 +5,9 @@ namespace Mine\Enum;
 enum BusinessEnum
 {
     //用户端
-    const CLIENT = 'client';
+    const CLIENT = 'Client';
     //商户端
-    const MERCHANT = 'merchant';
+    const MERCHANT = 'Merchant';
     //平台
-    const PLATFORM = 'platform';
+    const PLATFORM = 'Platform';
 }

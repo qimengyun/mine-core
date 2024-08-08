@@ -185,3 +185,24 @@ if (!function_exists('filled')) {
         return !blank($value);
     }
 }
+if (!function_exists('request_only')) {
+    //过滤值
+    function request_only(array $data, array $default = null): array
+    {
+        $keys = array_keys($default);
+        $result = [];
+        foreach ($keys as $key) {
+            $result[$key] = data_get($data, $key, $default[$key] ?? '');
+        }
+
+        return $result;
+    }
+}
+
+if (!function_exists('data_get')) {
+    //获取值
+    function data_get($data, $key, $default)
+    {
+        return $data[$key] ?? $default;
+    }
+}
