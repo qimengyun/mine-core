@@ -11,11 +11,12 @@ class MineValidation
     private array $messages = [];
     private array $customAttributes = [];
     private string $errors;
+    private bool $status;
+    private array $data;
 
     public function __construct(
         readonly private ValidatorFactoryInterface $validationFactory
-    )
-    {
+    ) {
     }
 
     private function getValidation($validation): void
@@ -52,13 +53,23 @@ class MineValidation
         $validator = $this->validationFactory->make($data, $rules, $this->messages, $this->customAttributes);
         if ($validator->fails()) {
             $this->errors = $validator->errors()->first();
-            return true;
+            $this->status = true;
+        } else {
+            $this->data = $data;
+            $this->status = false;
         }
-        return false;
     }
 
-    public function getError(): string
+    public function getStatus(): array
     {
-        return $this->errors;
+        $info = [
+            'status' => $this->status,
+        ];
+        if ($this->status) {
+            $info['data'] = $this->data;
+        } else {
+            $info['errors'] = $this->errors;
+        }
+        return $info;
     }
 }
