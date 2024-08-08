@@ -30,7 +30,7 @@ class MineValidation
         }
     }
 
-    public function validation($validation, array $data, $scene = ''): bool
+    public function validation($validation, array $data, $scene = '')
     {
         $this->getValidation($validation);
         $rules = $this->rules;
