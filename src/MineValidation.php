@@ -65,7 +65,7 @@ class MineValidation
         $info = [
             'status' => $this->status,
         ];
-        if ($this->status) {
+        if (!$this->status) {
             $info['data'] = $this->data;
         } else {
             $info['errors'] = $this->errors;
