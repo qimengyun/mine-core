@@ -93,14 +93,10 @@ class MineValidation
                         return true;
                     }
                 }
-                $this->data = $data;
-                $this->status = false;
-                return false;
-            } else {
-                $this->data = $data;
-                $this->status = false;
-                return false;
             }
+            $this->data = $data;
+            $this->status = false;
+            return false;
         }
     }
 
