@@ -10,4 +10,13 @@ enum BusinessEnum
     const MERCHANT = 'Merchant';
     //平台
     const PLATFORM = 'Platform';
+
+    public function getName($name): string
+    {
+        return match ($name) {
+            self::CLIENT => 'client',
+            self::MERCHANT => 'merchant',
+            self::PLATFORM => 'platform',
+        };
+    }
 }
