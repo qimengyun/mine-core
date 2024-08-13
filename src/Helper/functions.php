@@ -45,8 +45,8 @@ if (!function_exists('config')) {
         return Hyperf\Config\config($key, $default);
     }
 }
-if (!function_exists('rpc')) {
-    function rpc($interface)
+if (!function_exists('get_container')) {
+    function get_container($interface)
     {
         return container()->get($interface);
     }
