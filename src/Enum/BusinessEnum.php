@@ -11,7 +11,7 @@ enum BusinessEnum
     //平台
     const PLATFORM = 'Platform';
 
-    public function getName($name): string
+    public static function getName($name): string
     {
         return match ($name) {
             self::CLIENT => 'client',
