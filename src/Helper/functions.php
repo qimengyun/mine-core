@@ -192,7 +192,7 @@ if (!function_exists('request_only')) {
         $keys = array_keys($default);
         $result = [];
         foreach ($keys as $key) {
-            $result[$key] = data_get($data, $key, $default[$key] ?? '');
+            $result[$key] = trim(data_get($data, $key, $default[$key] ?? ''));
         }
 
         return $result;
